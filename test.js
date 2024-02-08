@@ -717,7 +717,7 @@ QUnit.test(
 
 
 QUnit.test(
-  'Create a function called "enambleButtonFeedback" that accepts two parameters, the first "containerElem" is an element that will contain the buttons; the second "feedbackElem" is the element that will receive the feedback.  The function must connect every button found in the container to the feedback function so that when a button is pressed the message "XXX was pressed" is added to the feedback element (where XXX is the text of the button).',
+  'Create a function called "buttonFeedback" that accepts two parameters, the first "containerElem" is an element that will contain the buttons; the second "feedbackElem" is the element that will receive the feedback.  The function must connect every button found in the container to the feedback function so that when a button is pressed the message "XXX was pressed" is added to the feedback element (where XXX is the text of the button).',
   function (assert) {
     if (!assert.functionExists('buttonFeedback', ['containerElem', 'feedbackElem'])) return;
     
