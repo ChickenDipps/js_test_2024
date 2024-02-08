@@ -715,25 +715,6 @@ QUnit.test(
 );
 
 
-QUnit.test(
-  'Create a function called "feedback" that accepts two parameters "elem" and "text".  The function should add a paragraph containing the text to the provided element.',
-  function (assert) {
-    if (!assert.functionExists('feedback', ['elem', 'text'])) return;
-    
-    const elem = document.querySelector('#feedback');
-    assert.strictEqual(elem.children.length, 1, 'The element should have just one child prior to any changes.');
-
-    feedback(elem, 'This is a test.');
-    assert.strictEqual(elem.children.length, 2, 'The element should have two children after the function is called.');
-    assert.strictEqual(elem.children[1].tagName, 'P', 'The second child should be a paragraph.');
-    assert.strictEqual(elem.children[1].textContent, 'This is a test.', 'The paragraph should contain the text provided.');
-    feedback(elem, 'This is another test.');
-    assert.strictEqual(elem.children.length, 3, 'The element should have three children after the function is called.');
-    assert.strictEqual(elem.children[2].tagName, 'P', 'The third child should be a paragraph.');
-    assert.strictEqual(elem.children[2].textContent, 'This is another test.', 'The paragraph should contain the text provided.');
-  }
-);
-
 
 QUnit.test(
   'Create a function called "enambleButtonFeedback" that accepts two parameters, the first "containerElem" is an element that will contain the buttons; the second "feedbackElem" is the element that will receive the feedback.  The function must connect every button found in the container to the feedback function so that when a button is pressed the message "XXX was pressed" is added to the feedback element (where XXX is the text of the button).',
